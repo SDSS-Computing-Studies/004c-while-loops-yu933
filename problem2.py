@@ -15,3 +15,9 @@ example:
 Enter a number: 4
 4 8 12 16 20 24 28 32 36 40 44 48
 """
+counter = input("Enter a numbrer: ")
+counter = int(str(counter).strip())
+i = 1
+while i <= 12:
+    print(int(counter * i), end =" ", flush=True)
+    i += 1
