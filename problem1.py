@@ -17,18 +17,18 @@ outputs:
 Access granted
 Access denied
 """
-i = 0
+import time
 username = ""
-password = ""
-      
-while username != 'admin' or password !='12345':
-    if i != 0:
+password =""
+guess = 0
+while username != "admin" or password != "12345" :
+    username=input("please enter username").strip()
+    password=input("please enter password").strip()
+    if username != "admin" or password != "12345":
         print("Access denied")
-    if i == 3:
-        break
-    username = input()
-    password = input()
-    i += 1
-
-if i < 3:
-    print("Access granted")
+        guess=guess+1
+        time.sleep(0.1)
+        if guess > 3:
+            break
+    else:
+        print("Access granted")
